@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /ajax/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /database/
+Disallow: /cart.php
+Disallow: /checkout.php
+Disallow: /account.php
+Disallow: /account-profile.php
+Disallow: /account-password.php
+Disallow: /account-addresses.php
+Disallow: /orders.php
+Disallow: /order-details.php
+Disallow: /wishlist.php
+
+Sitemap: /Glowelle/sitemap.xml
