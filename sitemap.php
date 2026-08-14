@@ -7,7 +7,7 @@ require_once __DIR__ . '/includes/init.php';
 header('Content-Type: application/xml; charset=utf-8');
 
 $staticPages = [
-    'index.php', 'shop.php', 'sunglasses.php', 'spectacles.php', 'accessories.php', 'collections.php',
+    'index.php', 'shop.php', 'sunglasses.php', 'spectacles.php', 'accessories.php', 'fitting-room.php', 'collections.php',
     'about.php', 'contact.php', 'quiz.php', 'journal.php', 'faq.php', 'login.php', 'register.php',
 ];
 

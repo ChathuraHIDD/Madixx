@@ -174,8 +174,10 @@ CREATE TABLE orders (
   shipping DECIMAL(10,2) NOT NULL DEFAULT 0,
   discount DECIMAL(10,2) NOT NULL DEFAULT 0,
   total DECIMAL(10,2) NOT NULL,
-  payment_method ENUM('cod','bank_transfer') NOT NULL DEFAULT 'cod',
+  payment_method ENUM('cod','bank_transfer','card') NOT NULL DEFAULT 'cod',
   payment_status ENUM('unpaid','paid') NOT NULL DEFAULT 'unpaid',
+  stripe_session_id VARCHAR(255) DEFAULT NULL,
+  stripe_payment_intent VARCHAR(255) DEFAULT NULL,
   order_status ENUM('pending','confirmed','processing','shipped','delivered','cancelled') NOT NULL DEFAULT 'pending',
   delivery_method ENUM('standard','express') NOT NULL DEFAULT 'standard',
   shipping_address VARCHAR(255) NOT NULL,
@@ -189,6 +191,7 @@ CREATE TABLE orders (
   UNIQUE KEY uniq_order_number (order_number),
   INDEX idx_status (order_status),
   INDEX idx_user (user_id),
+  INDEX idx_stripe_session (stripe_session_id),
   CONSTRAINT fk_orders_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 

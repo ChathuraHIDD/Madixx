@@ -33,6 +33,7 @@
         <li><a href="<?= e(base_url('sunglasses.php')) ?>">Sunglasses</a></li>
         <li><a href="<?= e(base_url('spectacles.php')) ?>">Spectacles</a></li>
         <li><a href="<?= e(base_url('accessories.php')) ?>">Accessories</a></li>
+        <li><a href="<?= e(base_url('fitting-room.php')) ?>">Virtual Fitting Room</a></li>
         <li><a href="<?= e(base_url('collections.php')) ?>">Collections</a></li>
       </ul>
     </div>

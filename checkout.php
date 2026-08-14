@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postalCode = trim((string) ($_POST['postal_code'] ?? ''));
     $country = trim((string) ($_POST['country'] ?? 'Sri Lanka'));
     $deliveryMethod = in_array($_POST['delivery_method'] ?? '', ['standard', 'express'], true) ? $_POST['delivery_method'] : 'standard';
-    $paymentMethod = in_array($_POST['payment_method'] ?? '', ['cod', 'bank_transfer'], true) ? $_POST['payment_method'] : 'cod';
+    $paymentMethod = in_array($_POST['payment_method'] ?? '', ['cod', 'bank_transfer', 'card'], true) ? $_POST['payment_method'] : 'cod';
 
     if ($name === '') $errors[] = 'Full name is required.';
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'A valid email is required.';
@@ -82,6 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 clear_cart();
             }
 
+            if ($paymentMethod === 'card') {
+                redirect('stripe-checkout.php?order=' . urlencode($result['order_number']));
+            }
+
             flash('success', 'Your order has been placed successfully!');
             redirect('order-confirmation.php?order=' . urlencode($result['order_number']));
         } catch (Throwable $e) {
@@ -100,7 +104,7 @@ require __DIR__ . '/includes/header.php';
 
 <div class="container section-tight">
   <h1 style="font-size:2.2rem;margin-bottom:8px;">Checkout</h1>
-  <p style="color:var(--text-muted);margin-bottom:40px;">Secure checkout — Cash on Delivery or Bank Transfer.</p>
+  <p style="color:var(--text-muted);margin-bottom:40px;">Secure checkout — pay by Card, Cash on Delivery, or Bank Transfer.</p>
 
   <?php if ($errors): ?>
   <div class="flash flash-error" style="margin:0 0 24px;max-width:none;">
@@ -194,7 +198,11 @@ require __DIR__ . '/includes/header.php';
         <h3 style="margin-bottom:24px;">Payment Method</h3>
         <fieldset>
           <label class="payment-option selected">
-            <input type="radio" name="payment_method" value="cod" checked>
+            <input type="radio" name="payment_method" value="card" checked>
+            <div><strong><i class="fa-solid fa-lock" style="margin-right:6px;"></i>Credit / Debit Card</strong><small>Pay securely now with Stripe — Visa, Mastercard, Amex.</small></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment_method" value="cod">
             <div><strong>Cash on Delivery</strong><small>Pay in cash when your order arrives.</small></div>
           </label>
           <label class="payment-option">
@@ -234,7 +242,7 @@ require __DIR__ . '/includes/header.php';
 
         <div class="checkout-nav-btns">
           <button type="button" class="btn btn-outline checkout-prev">Back</button>
-          <button type="submit" class="btn btn-primary">Place Order</button>
+          <button type="submit" class="btn btn-primary" id="checkoutSubmitBtn"><i class="fa-solid fa-lock" style="margin-right:6px;"></i>Pay Now — Secure Checkout</button>
         </div>
       </div>
     </form>
@@ -271,6 +279,25 @@ require __DIR__ . '/includes/header.php';
     document.getElementById('summaryTotal').textContent = money(SUBTOTAL - DISCOUNT + shipping);
   };
 
+  function paymentLabelFor(value) {
+    if (value === 'bank_transfer') return 'Bank Transfer';
+    if (value === 'card') return 'Card (Stripe)';
+    return 'Cash on Delivery';
+  }
+
+  function syncSubmitButton() {
+    const payment = document.querySelector('input[name="payment_method"]:checked');
+    const btn = document.getElementById('checkoutSubmitBtn');
+    if (!btn) return;
+    btn.innerHTML = payment && payment.value === 'card'
+      ? '<i class="fa-solid fa-lock" style="margin-right:6px;"></i>Pay Now — Secure Checkout'
+      : 'Place Order';
+  }
+  document.querySelectorAll('input[name="payment_method"]').forEach((input) => {
+    input.addEventListener('change', syncSubmitButton);
+  });
+  syncSubmitButton();
+
   document.querySelector('.checkout-panel[data-step="4"] .checkout-next')?.addEventListener('click', function () {
     const address = [
       document.getElementById('cf_address').value,
@@ -284,8 +311,7 @@ require __DIR__ . '/includes/header.php';
     const delivery = document.querySelector('input[name="delivery_method"]:checked');
     const payment = document.querySelector('input[name="payment_method"]:checked');
     const deliveryLabel = delivery && delivery.value === 'express' ? 'Express Delivery' : 'Standard Delivery';
-    const paymentLabel = payment && payment.value === 'bank_transfer' ? 'Bank Transfer' : 'Cash on Delivery';
-    document.getElementById('reviewMethods').textContent = deliveryLabel + ' · ' + paymentLabel;
+    document.getElementById('reviewMethods').textContent = deliveryLabel + ' · ' + paymentLabelFor(payment ? payment.value : '');
   });
 })();
 </script>
