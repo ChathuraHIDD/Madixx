@@ -95,7 +95,7 @@ $user = current_user();
   <div class="search-bar" id="searchBar">
     <form action="<?= e(base_url('search.php')) ?>" method="get" class="search-form">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="search" name="q" placeholder="Search for serums, foundation, gifts…" value="<?= e($_GET['q'] ?? '') ?>" aria-label="Search products">
+      <input type="search" name="q" placeholder="Search for sunglasses, spectacles, accessories…" value="<?= e($_GET['q'] ?? '') ?>" aria-label="Search products">
       <button type="submit">Search</button>
     </form>
   </div>
