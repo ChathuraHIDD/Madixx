@@ -105,7 +105,7 @@ require __DIR__ . '/includes/header.php';
         <?php endif; ?>
 
         <div class="filter-group">
-          <h4>Skin Type</h4>
+          <h4>Frame Material</h4>
           <?php foreach ($skinTypes as $st): ?>
           <label class="filter-option">
             <input type="radio" name="skin_type" value="<?= e($st) ?>" <?= ($filters['skin_type'] ?? '') === $st ? 'checked' : '' ?>>
