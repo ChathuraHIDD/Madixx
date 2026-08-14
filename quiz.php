@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Beauty Quiz — Find Your Glow — MADIXX';
-$metaDescription = 'Take the MADIXX Beauty Quiz and get personalized skincare recommendations in under a minute.';
+$pageTitle = 'Frame Finder Quiz — MADIXX';
+$metaDescription = 'Take the MADIXX Frame Finder Quiz and get personalized sunglasses or spectacles recommendations in under a minute.';
 $canonicalPath = 'quiz.php';
 
 require __DIR__ . '/includes/header.php';
@@ -13,36 +13,36 @@ require __DIR__ . '/includes/header.php';
 
 <div class="container section-tight quiz-wrap">
   <div class="text-center" style="margin-bottom:8px;">
-    <p class="eyebrow">Beauty Quiz</p>
-    <h1 style="font-size:2.2rem;">Find Your Glow</h1>
-    <p style="color:var(--text-muted);">Answer three quick questions for personalized product recommendations.</p>
+    <p class="eyebrow">Frame Finder</p>
+    <h1 style="font-size:2.2rem;">Find Your Frame</h1>
+    <p style="color:var(--text-muted);">Answer three quick questions for personalized frame recommendations.</p>
   </div>
 
   <div id="quizForm" style="margin-top:40px;">
     <div class="quiz-progress"><div class="quiz-progress-bar" id="quizProgressBar" style="width:33.3%;"></div></div>
 
-    <div class="quiz-question active" data-question="1" data-field="skin_type">
-      <h2 class="text-center">What is your skin type?</h2>
+    <div class="quiz-question active" data-question="1" data-field="face_shape">
+      <h2 class="text-center">What is your face shape?</h2>
       <div class="quiz-options">
-        <?php foreach (['Dry', 'Oily', 'Combination', 'Normal', 'Sensitive'] as $opt): ?>
+        <?php foreach (['Round', 'Oval', 'Square', 'Heart'] as $opt): ?>
         <div class="quiz-option" data-value="<?= e($opt) ?>"><?= e($opt) ?></div>
         <?php endforeach; ?>
       </div>
     </div>
 
-    <div class="quiz-question" data-question="2" data-field="concern">
-      <h2 class="text-center">What is your main concern?</h2>
+    <div class="quiz-question" data-question="2" data-field="use_case">
+      <h2 class="text-center">What do you need glasses for?</h2>
       <div class="quiz-options">
-        <?php foreach (['Acne', 'Dryness', 'Dullness', 'Aging', 'Sensitivity'] as $opt): ?>
+        <?php foreach (['Sun Protection', 'Prescription Vision', 'Both'] as $opt): ?>
         <div class="quiz-option" data-value="<?= e($opt) ?>"><?= e($opt) ?></div>
         <?php endforeach; ?>
       </div>
     </div>
 
-    <div class="quiz-question" data-question="3" data-field="goal">
-      <h2 class="text-center">What are you looking for?</h2>
+    <div class="quiz-question" data-question="3" data-field="style">
+      <h2 class="text-center">What's your style?</h2>
       <div class="quiz-options">
-        <?php foreach (['Hydration', 'Brightening', 'Anti-aging', 'Skin barrier', 'Glow'] as $opt): ?>
+        <?php foreach (['Classic', 'Bold', 'Minimal', 'Vintage'] as $opt): ?>
         <div class="quiz-option" data-value="<?= e($opt) ?>"><?= e($opt) ?></div>
         <?php endforeach; ?>
       </div>

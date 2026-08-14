@@ -7,11 +7,12 @@ require_once __DIR__ . '/includes/init.php';
 $faqs = [
     ['q' => 'How long does shipping take?', 'a' => 'Standard delivery takes 3–5 business days. Express delivery arrives in 1–2 business days. Orders over $75 qualify for free standard shipping.'],
     ['q' => 'What payment methods do you accept?', 'a' => 'We currently accept Cash on Delivery and Bank Transfer. Online card payments are coming soon.'],
-    ['q' => 'Can I return or exchange a product?', 'a' => 'Yes — unopened products can be returned within 14 days of delivery for a full refund. Please contact us to start a return.'],
-    ['q' => 'Are MADIXX products cruelty-free?', 'a' => 'Yes, all MADIXX formulas are cruelty-free and never tested on animals.'],
+    ['q' => 'Can I return or exchange a product?', 'a' => 'Yes — unused frames in original packaging can be returned within 14 days of delivery for a full refund. Please contact us to start a return.'],
+    ['q' => 'Can I fit my own prescription lenses into MADIXX spectacles?', 'a' => 'Yes — every spectacle frame is sold unglazed and ready for your optician to fit with single-vision, progressive or blue-light lenses.'],
+    ['q' => 'Do MADIXX sunglasses block UV rays?', 'a' => 'Every pair of MADIXX sunglasses meets the UV400 standard, blocking 100% of UVA and UVB rays.'],
     ['q' => 'How do I track my order?', 'a' => 'Use the order number from your confirmation email or account on our Order Tracking page to see real-time status updates.'],
     ['q' => 'Do you ship internationally?', 'a' => 'We currently ship within Sri Lanka. International shipping is on our roadmap — sign up to our newsletter for updates.'],
-    ['q' => 'How do I know which products are right for my skin?', 'a' => 'Take our 1-minute Beauty Quiz for personalized product recommendations based on your skin type and goals.'],
+    ['q' => 'How do I know which frame shape suits me?', 'a' => 'Take our 1-minute Frame Finder Quiz for personalized recommendations based on your face shape and style.'],
     ['q' => 'Can I cancel or change my order after placing it?', 'a' => 'Please contact us as soon as possible — we can usually amend or cancel orders that have not yet shipped.'],
 ];
 
