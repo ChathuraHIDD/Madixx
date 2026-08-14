@@ -3,8 +3,8 @@
 
 <section class="newsletter-band">
   <div class="container newsletter-inner">
-    <h2>A Little Glow, In Your Inbox.</h2>
-    <p>Get beauty tips, new launches and exclusive offers.</p>
+    <h2>New Frames, In Your Inbox.</h2>
+    <p>Get new arrivals, styling tips and exclusive offers.</p>
     <form class="newsletter-form" id="newsletterForm">
       <?= csrf_field() ?>
       <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
@@ -17,8 +17,8 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="<?= e(base_url('index.php')) ?>" class="logo">MADIXX</a>
-      <p>Skincare and cosmetics designed to enhance your natural glow.</p>
+      <a href="<?= e(base_url('index.php')) ?>" class="logo"><img src="<?= e(base_url('assets/images/logo.png')) ?>" alt="MADIXX" class="logo-img"></a>
+      <p>Sunglasses, spectacles and eyewear accessories, designed to see and be seen.</p>
       <div class="social-links">
         <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
@@ -30,9 +30,9 @@
     <div class="footer-col">
       <h3>Shop</h3>
       <ul>
-        <li><a href="<?= e(base_url('skincare.php')) ?>">Skincare</a></li>
-        <li><a href="<?= e(base_url('makeup.php')) ?>">Makeup</a></li>
-        <li><a href="<?= e(base_url('body.php')) ?>">Body Care</a></li>
+        <li><a href="<?= e(base_url('sunglasses.php')) ?>">Sunglasses</a></li>
+        <li><a href="<?= e(base_url('spectacles.php')) ?>">Spectacles</a></li>
+        <li><a href="<?= e(base_url('accessories.php')) ?>">Accessories</a></li>
         <li><a href="<?= e(base_url('collections.php')) ?>">Collections</a></li>
       </ul>
     </div>
@@ -41,8 +41,8 @@
       <h3>Discover</h3>
       <ul>
         <li><a href="<?= e(base_url('about.php')) ?>">About Us</a></li>
-        <li><a href="<?= e(base_url('journal.php')) ?>">Beauty Journal</a></li>
-        <li><a href="<?= e(base_url('quiz.php')) ?>">Beauty Quiz</a></li>
+        <li><a href="<?= e(base_url('journal.php')) ?>">Style Journal</a></li>
+        <li><a href="<?= e(base_url('quiz.php')) ?>">Frame Finder Quiz</a></li>
         <li><a href="<?= e(base_url('faq.php')) ?>">FAQ</a></li>
       </ul>
     </div>
@@ -60,7 +60,7 @@
 
   <div class="container footer-bottom">
     <p>&copy; <?= date('Y') ?> MADIXX. All rights reserved.</p>
-    <p>Crafted with care for your everyday ritual.</p>
+    <p>Crafted for clearer, sharper everyday style.</p>
   </div>
 </footer>
 
