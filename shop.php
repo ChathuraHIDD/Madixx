@@ -51,12 +51,12 @@ $brandStmt = db()->prepare($brandSql . ' ORDER BY p.brand ASC');
 $brandStmt->execute($params);
 $brands = $brandStmt->fetchAll(PDO::FETCH_COLUMN);
 
-$skinTypes = ['Dry', 'Oily', 'Combination', 'Normal', 'Sensitive', 'All Skin Types'];
+$skinTypes = ['Acetate', 'Metal', 'Titanium', 'Acetate & Metal', 'Vegan Leather', 'Molded Shell', 'Microfiber'];
 
 $wishlistIds = get_wishlist_product_ids();
 
 $pageTitle = ($activeCategory ? $activeCategory['name'] : 'Shop All') . ' — MADIXX';
-$metaDescription = $activeCategory ? $activeCategory['description'] : 'Shop the full MADIXX collection of premium skincare, makeup and body care.';
+$metaDescription = $activeCategory ? $activeCategory['description'] : 'Shop the full MADIXX collection of sunglasses, spectacles and eyewear accessories.';
 $canonicalPath = 'shop.php' . ($categorySlug ? '?category=' . $categorySlug : '');
 
 require __DIR__ . '/includes/header.php';
