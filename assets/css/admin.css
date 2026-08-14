@@ -1,24 +1,24 @@
 /* =====================================================================
-   Glowelle Admin — Dashboard styles (shares the storefront palette)
+   MADIXX Admin — Dashboard styles (shares the storefront palette)
    ===================================================================== */
 :root {
-  --color-ivory: #FBF7F3;
-  --color-cream: #F5EFE9;
-  --color-blush: #F3E6DE;
-  --color-dusty-rose: #C9A9A6;
-  --color-dusty-rose-dark: #B4837D;
-  --color-champagne: #E8DCC4;
-  --color-champagne-dark: #D3BE93;
-  --color-espresso: #3B2A24;
-  --color-charcoal: #2A211D;
+  --color-ivory: #FBF9F5;
+  --color-cream: #F4EEE4;
+  --color-blush: #EFE6D7;
+  --color-dusty-rose: #C6A06D;
+  --color-dusty-rose-dark: #A67F4C;
+  --color-champagne: #E9DFC8;
+  --color-champagne-dark: #CBAD7B;
+  --color-espresso: #16213F;
+  --color-charcoal: #0E1730;
   --color-white: #FFFFFF;
-  --text-dark: #3B2A24;
-  --text-muted: #7C6355;
-  --text-light: #B4A296;
-  --border-soft: #E3D3C8;
-  --border-strong: #D3BEAE;
-  --success: #4C7A5C;
-  --error: #A6453B;
+  --text-dark: #1B2A4A;
+  --text-muted: #675F52;
+  --text-light: #A79C8A;
+  --border-soft: #E3DACB;
+  --border-strong: #CDBFA6;
+  --success: #3F7A54;
+  --error: #B23B32;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Jost', 'Helvetica Neue', Arial, sans-serif;
   --radius-sm: 3px;
@@ -41,10 +41,10 @@ img { max-width: 100%; display: block; }
 /* ---- Layout ---- */
 .admin-shell { display: flex; min-height: 100vh; }
 .admin-sidebar { width: var(--sidebar-width); background: var(--color-espresso); color: var(--color-champagne); flex-shrink: 0; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
-.admin-sidebar .logo { display: block; padding: 26px 24px; font-family: var(--font-heading); font-size: 1.3rem; letter-spacing: 3px; color: var(--color-ivory); border-bottom: 1px solid rgba(245,239,233,0.12); }
+.admin-sidebar .logo { display: block; padding: 26px 24px; font-family: var(--font-heading); font-size: 1.3rem; letter-spacing: 3px; color: var(--color-ivory); border-bottom: 1px solid rgba(237,231,219,0.12); }
 .admin-nav a { display: flex; align-items: center; gap: 12px; padding: 13px 24px; font-size: 0.88rem; color: var(--color-champagne); border-left: 3px solid transparent; }
-.admin-nav a:hover { background: rgba(245,239,233,0.06); }
-.admin-nav a.active { background: rgba(245,239,233,0.1); border-left-color: var(--color-dusty-rose); color: var(--color-ivory); }
+.admin-nav a:hover { background: rgba(237,231,219,0.06); }
+.admin-nav a.active { background: rgba(237,231,219,0.1); border-left-color: var(--color-dusty-rose); color: var(--color-ivory); }
 .admin-nav .nav-section { padding: 18px 24px 6px; font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); }
 
 .admin-main { flex: 1; min-width: 0; }

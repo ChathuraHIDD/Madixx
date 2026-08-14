@@ -1,31 +1,31 @@
 /* =====================================================================
-   Glowelle — Design System
+   MADIXX — Design System
    ===================================================================== */
 
 :root {
-  /* Palette */
-  --color-ivory: #FBF7F3;
-  --color-cream: #F5EFE9;
-  --color-blush: #F3E6DE;
-  --color-blush-deep: #EAD9CE;
-  --color-dusty-rose: #C9A9A6;
-  --color-dusty-rose-dark: #B4837D;
-  --color-champagne: #E8DCC4;
-  --color-champagne-dark: #D3BE93;
-  --color-espresso: #3B2A24;
-  --color-charcoal: #2A211D;
+  /* Palette — navy (from the MADIXX mark) + warm sand (from the studio photography) */
+  --color-ivory: #FBF9F5;
+  --color-cream: #F4EEE4;
+  --color-blush: #EFE6D7;
+  --color-blush-deep: #E4D5BE;
+  --color-dusty-rose: #C6A06D;
+  --color-dusty-rose-dark: #A67F4C;
+  --color-champagne: #E9DFC8;
+  --color-champagne-dark: #CBAD7B;
+  --color-espresso: #16213F;
+  --color-charcoal: #0E1730;
   --color-white: #FFFFFF;
 
-  --text-dark: #3B2A24;
-  --text-muted: #7C6355;
-  --text-light: #B4A296;
-  --text-on-dark: #F5EFE9;
+  --text-dark: #1B2A4A;
+  --text-muted: #675F52;
+  --text-light: #A79C8A;
+  --text-on-dark: #EDE7DB;
 
-  --border-soft: #E3D3C8;
-  --border-strong: #D3BEAE;
+  --border-soft: #E3DACB;
+  --border-strong: #CDBFA6;
 
-  --success: #4C7A5C;
-  --error: #A6453B;
+  --success: #3F7A54;
+  --error: #B23B32;
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -35,9 +35,9 @@
   --container-width: 1280px;
   --radius-sm: 2px;
   --radius-md: 4px;
-  --shadow-sm: 0 1px 3px rgba(59, 42, 36, 0.08);
-  --shadow-md: 0 8px 24px rgba(59, 42, 36, 0.10);
-  --shadow-lg: 0 20px 48px rgba(59, 42, 36, 0.16);
+  --shadow-sm: 0 1px 3px rgba(20, 28, 50, 0.08);
+  --shadow-md: 0 8px 24px rgba(20, 28, 50, 0.10);
+  --shadow-lg: 0 20px 48px rgba(20, 28, 50, 0.16);
   --transition: 220ms ease;
 }
 
@@ -120,7 +120,7 @@ p { margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251, 247, 243, 0.96);
+  background: rgba(251, 249, 245, 0.96);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -211,7 +211,7 @@ p { margin: 0 0 1em; }
 .mobile-nav a { display: block; padding: 12px 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border-soft); }
 .mobile-nav-divider { height: 1px; }
 .nav-overlay {
-  position: fixed; inset: 0; background: rgba(43, 33, 29, 0.4);
+  position: fixed; inset: 0; background: rgba(15, 22, 40, 0.45);
   z-index: 205; opacity: 0; visibility: hidden; transition: opacity var(--transition);
 }
 .nav-overlay.open { opacity: 1; visibility: visible; }
@@ -290,7 +290,7 @@ p { margin: 0 0 1em; }
 .category-card:hover img { transform: scale(1.05); }
 .category-card-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(43,33,29,0.55) 100%);
+  background: linear-gradient(180deg, transparent 40%, rgba(15,22,40,0.55) 100%);
   display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; color: var(--color-ivory);
 }
 .category-card-overlay h3 { color: var(--color-ivory); margin-bottom: 4px; }
@@ -318,7 +318,7 @@ p { margin: 0 0 1em; }
 .wishlist-toggle:hover, .wishlist-toggle.active { color: var(--color-dusty-rose-dark); }
 .quick-view-btn {
   position: absolute; left: 12px; right: 12px; bottom: 12px;
-  background: rgba(251,247,243,0.94); border: none; padding: 11px; font-size: 0.72rem;
+  background: rgba(251,249,245,0.94); border: none; padding: 11px; font-size: 0.72rem;
   letter-spacing: 1.5px; text-transform: uppercase; border-radius: var(--radius-sm);
   opacity: 0; transform: translateY(8px); transition: all var(--transition);
 }
@@ -377,12 +377,12 @@ fieldset { border: none; padding: 0; margin: 0; }
 .footer-brand .logo { color: var(--color-ivory); }
 .footer-brand p { color: var(--color-champagne); font-size: 0.9rem; margin: 14px 0 20px; max-width: 260px; }
 .social-links { display: flex; gap: 14px; }
-.social-links a { width: 36px; height: 36px; border: 1px solid rgba(245,239,233,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.social-links a { width: 36px; height: 36px; border: 1px solid rgba(237,231,219,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 .footer-col h3 { color: var(--color-ivory); font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
 .footer-col ul li { margin-bottom: 12px; }
 .footer-col a { color: var(--color-champagne); font-size: 0.9rem; }
 .footer-col a:hover { color: var(--color-ivory); }
-.footer-bottom { display: flex; justify-content: space-between; padding: 24px 0; border-top: 1px solid rgba(245,239,233,0.15); font-size: 0.8rem; color: var(--color-champagne); }
+.footer-bottom { display: flex; justify-content: space-between; padding: 24px 0; border-top: 1px solid rgba(237,231,219,0.15); font-size: 0.8rem; color: var(--color-champagne); }
 
 /* ---------------------------------------------------------------------
    Empty states
@@ -574,7 +574,7 @@ fieldset { border: none; padding: 0; margin: 0; }
 /* ---------------------------------------------------------------------
    Quick View modal
    --------------------------------------------------------------------- */
-.modal-overlay { position: fixed; inset: 0; background: rgba(43,33,29,0.5); z-index: 300; display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; visibility: hidden; transition: opacity var(--transition); }
+.modal-overlay { position: fixed; inset: 0; background: rgba(15,22,40,0.5); z-index: 300; display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; visibility: hidden; transition: opacity var(--transition); }
 .modal-overlay.open { opacity: 1; visibility: visible; }
 .modal-box { background: var(--color-white); border-radius: var(--radius-md); max-width: 780px; width: 100%; max-height: 88vh; overflow-y: auto; position: relative; padding: 32px; }
 .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.6rem; color: var(--text-muted); }

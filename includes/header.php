@@ -10,11 +10,11 @@ declare(strict_types=1);
  *   $bodyClass        string
  *   $ogImage          string
  */
-$pageTitle ??= 'MADIXX — Beauty, Refined.';
-$metaDescription ??= 'MADIXX is a premium skincare and cosmetics destination — discover products designed to enhance your natural glow.';
+$pageTitle ??= 'MADIXX — Sunglasses & Eyewear, Refined.';
+$metaDescription ??= 'MADIXX is a premium eyewear destination — sunglasses, prescription-ready spectacles and eyewear accessories, designed to see and be seen.';
 $canonicalPath ??= trim(strtok($_SERVER['REQUEST_URI'] ?? '', '?'), '/');
 $bodyClass ??= '';
-$ogImage ??= base_url('assets/images/placeholder-hero.jpg');
+$ogImage ??= base_url('assets/images/hero.png');
 
 $cartCount = get_cart_count();
 $user = current_user();
@@ -31,7 +31,7 @@ $user = current_user();
 <meta property="og:description" content="<?= e($metaDescription) ?>">
 <meta property="og:image" content="<?= e($ogImage) ?>">
 <meta property="og:site_name" content="MADIXX">
-<link rel="icon" type="image/jpeg" href="<?= e(base_url('assets/images/favicon.jpg')) ?>">
+<link rel="icon" type="image/png" href="<?= e(base_url('assets/images/logo.png')) ?>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
