@@ -6,7 +6,7 @@ declare(strict_types=1);
 $adminUser = current_user();
 $navItems = [
     'dashboard'  => ['label' => 'Dashboard', 'icon' => 'fa-gauge', 'url' => 'admin/index.php'],
-    'products'   => ['label' => 'Products', 'icon' => 'fa-flask', 'url' => 'admin/products.php'],
+    'products'   => ['label' => 'Products', 'icon' => 'fa-glasses', 'url' => 'admin/products.php'],
     'categories' => ['label' => 'Categories', 'icon' => 'fa-layer-group', 'url' => 'admin/categories.php'],
     'orders'     => ['label' => 'Orders', 'icon' => 'fa-box', 'url' => 'admin/orders.php'],
     'customers'  => ['label' => 'Customers', 'icon' => 'fa-users', 'url' => 'admin/customers.php'],
