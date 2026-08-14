@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /** Expects $post (array or null), $errors before include. */
 $post ??= [];
-$categories = ['Skincare Tips', 'Makeup Tips', 'Beauty Routines', 'Ingredients', 'MADIXX News'];
+$categories = ['Style Guides', 'Lens Guides', 'Care Guides', 'Frame Guides', 'MADIXX News'];
 $val = static fn (string $key, $default = '') => e((string) ($post[$key] ?? $default));
 ?>
 <?php if ($errors): ?>

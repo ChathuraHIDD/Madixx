@@ -34,8 +34,8 @@ $val = static fn (string $key, $default = '') => e((string) ($p[$key] ?? $defaul
       <div class="form-group"><label>Brand</label><input type="text" name="brand" value="<?= $val('brand', 'MADIXX') ?>"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label>Product Type</label><input type="text" name="product_type" placeholder="Serum, Cleanser, Lipstick…" value="<?= $val('product_type') ?>"></div>
-      <div class="form-group"><label>Skin Type</label><input type="text" name="skin_type" placeholder="Dry, Oily, All Skin Types…" value="<?= $val('skin_type') ?>"></div>
+      <div class="form-group"><label>Frame Shape / Type</label><input type="text" name="product_type" placeholder="Square, Round, Aviator, Cat-Eye, Case…" value="<?= $val('product_type') ?>"></div>
+      <div class="form-group"><label>Frame Material</label><input type="text" name="skin_type" placeholder="Acetate, Metal, Titanium…" value="<?= $val('skin_type') ?>"></div>
     </div>
     <div class="form-group"><label>Short Description</label><input type="text" name="short_description" value="<?= $val('short_description') ?>"></div>
     <div class="form-group"><label>Full Description</label><textarea name="description"><?= $val('description') ?></textarea></div>
@@ -52,9 +52,9 @@ $val = static fn (string $key, $default = '') => e((string) ($p[$key] ?? $defaul
 
   <div class="admin-card">
     <h3>Product Details</h3>
-    <div class="form-group"><label>Ingredients (comma-separated)</label><textarea name="ingredients"><?= $val('ingredients') ?></textarea></div>
-    <div class="form-group"><label>Benefits (one per line)</label><textarea name="benefits"><?= $val('benefits') ?></textarea></div>
-    <div class="form-group"><label>How To Use</label><textarea name="how_to_use"><?= $val('how_to_use') ?></textarea></div>
+    <div class="form-group"><label>Frame &amp; Lens Details (comma-separated)</label><textarea name="ingredients"><?= $val('ingredients') ?></textarea></div>
+    <div class="form-group"><label>Features (one per line)</label><textarea name="benefits"><?= $val('benefits') ?></textarea></div>
+    <div class="form-group"><label>Care &amp; Fit Instructions</label><textarea name="how_to_use"><?= $val('how_to_use') ?></textarea></div>
   </div>
 
   <div class="admin-card">

@@ -243,7 +243,7 @@ require __DIR__ . '/includes/header.php';
   <section class="section fade-in">
     <div class="section-heading text-center">
       <p class="eyebrow">You May Also Like</p>
-      <h2>Complete Your Ritual</h2>
+      <h2>Complete The Look</h2>
     </div>
     <div class="product-grid">
       <?php foreach ($relatedProducts as $relatedProduct): $product = $relatedProduct; ?>
