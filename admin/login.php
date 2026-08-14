@@ -36,7 +36,7 @@ $pageTitle = 'Admin Login';
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login — Glowelle</title>
+<title>Admin Login — MADIXX</title>
 <meta name="robots" content="noindex, nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= e(base_url('assets/css/admin.css')) ?>">
@@ -44,7 +44,7 @@ $pageTitle = 'Admin Login';
 <body>
 <div class="admin-login-wrap">
   <div class="admin-login-card">
-    <span class="logo">GLOWELLE</span>
+    <span class="logo">MADIXX</span>
     <p class="tag">Admin Panel</p>
 
     <?php if ($errors): ?>

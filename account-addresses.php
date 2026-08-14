@@ -66,7 +66,7 @@ $stmt->execute(['uid' => $uid]);
 $addresses = $stmt->fetchAll();
 
 $activeAccountPage = 'addresses';
-$pageTitle = 'My Addresses — Glowelle';
+$pageTitle = 'My Addresses — MADIXX';
 $canonicalPath = 'account-addresses.php';
 
 require __DIR__ . '/includes/header.php';

@@ -18,7 +18,7 @@ $navItems = [
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= e($pageTitle ?? 'Admin') ?> — Glowelle Admin</title>
+<title><?= e($pageTitle ?? 'Admin') ?> — MADIXX Admin</title>
 <meta name="robots" content="noindex, nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -26,11 +26,11 @@ $navItems = [
 </head>
 <body>
 <script>
-  window.GLOWELLE = { baseUrl: <?= json_encode(BASE_URL) ?>, csrfToken: <?= json_encode(csrf_token()) ?> };
+  window.MADIXX = { baseUrl: <?= json_encode(BASE_URL) ?>, csrfToken: <?= json_encode(csrf_token()) ?> };
 </script>
 <div class="admin-shell">
   <aside class="admin-sidebar" id="adminSidebar">
-    <a href="<?= e(base_url('admin/index.php')) ?>" class="logo">GLOWELLE</a>
+    <a href="<?= e(base_url('admin/index.php')) ?>" class="logo">MADIXX</a>
     <nav class="admin-nav">
       <p class="nav-section">Manage</p>
       <?php foreach ($navItems as $key => $item): ?>

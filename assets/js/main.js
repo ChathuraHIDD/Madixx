@@ -1,10 +1,10 @@
 /* =====================================================================
-   Glowelle — Core front-end behaviour (vanilla JS, no framework)
+   MADIXX — Core front-end behaviour (vanilla JS, no framework)
    ===================================================================== */
 (function () {
   'use strict';
 
-  const CFG = window.GLOWELLE || { baseUrl: '/', csrfToken: '', isLoggedIn: false };
+  const CFG = window.MADIXX || { baseUrl: '/', csrfToken: '', isLoggedIn: false };
 
   function url(path) {
     return CFG.baseUrl.replace(/\/$/, '/') + path.replace(/^\//, '');

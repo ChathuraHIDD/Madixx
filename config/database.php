@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'glowelle');
+define('DB_NAME', 'madixx');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
@@ -26,7 +26,7 @@ function db(): PDO
         try {
             $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
         } catch (PDOException $e) {
-            error_log('Glowelle DB connection failed: ' . $e->getMessage());
+            error_log('MADIXX DB connection failed: ' . $e->getMessage());
             http_response_code(500);
             die('We are experiencing a technical issue. Please try again shortly.');
         }

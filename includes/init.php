@@ -13,7 +13,7 @@ ini_set('log_errors', '1');
 date_default_timezone_set('Asia/Colombo');
 
 if (!defined('BASE_URL')) {
-    define('BASE_URL', '/Glowelle/');
+    define('BASE_URL', '/Madixx/');
 }
 
 if (session_status() !== PHP_SESSION_ACTIVE) {

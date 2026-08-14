@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'sku'               => $sku,
             'description'       => trim((string) ($_POST['description'] ?? '')),
             'short_description' => trim((string) ($_POST['short_description'] ?? '')),
-            'brand'             => trim((string) ($_POST['brand'] ?? 'Glowelle')),
+            'brand'             => trim((string) ($_POST['brand'] ?? 'MADIXX')),
             'product_type'      => trim((string) ($_POST['product_type'] ?? '')) ?: null,
             'skin_type'         => trim((string) ($_POST['skin_type'] ?? '')) ?: null,
             'price'             => $price,

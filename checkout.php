@@ -91,8 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = 'Checkout — Glowelle';
-$metaDescription = 'Complete your Glowelle order.';
+$pageTitle = 'Checkout — MADIXX';
+$metaDescription = 'Complete your MADIXX order.';
 $canonicalPath = 'checkout.php';
 
 require __DIR__ . '/includes/header.php';

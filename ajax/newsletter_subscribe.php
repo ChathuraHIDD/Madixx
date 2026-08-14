@@ -16,7 +16,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 try {
     $stmt = db()->prepare('INSERT INTO newsletter_subscribers (email) VALUES (:email)');
     $stmt->execute(['email' => $email]);
-    echo json_encode(['success' => true, 'message' => 'You are on the list! Welcome to Glowelle.']);
+    echo json_encode(['success' => true, 'message' => 'You are on the list! Welcome to MADIXX.']);
 } catch (PDOException $e) {
     if ((string) $e->getCode() === '23000') {
         echo json_encode(['success' => true, 'message' => 'You are already subscribed — thank you!']);

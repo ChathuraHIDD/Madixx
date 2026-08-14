@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         db()->prepare('INSERT INTO password_resets (user_id, token_hash, expires_at) VALUES (:uid, :hash, :exp)')
             ->execute(['uid' => $user['id'], 'hash' => $tokenHash, 'exp' => $expiresAt]);
 
-        // Glowelle has no outbound mail server configured in this environment, so the
+        // MADIXX has no outbound mail server configured in this environment, so the
         // reset link is surfaced directly here rather than emailed.
         $resetLink = base_url('reset-password.php?uid=' . $user['id'] . '&token=' . $token);
     }
@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $submitted = true;
 }
 
-$pageTitle = 'Forgot Password — Glowelle';
-$metaDescription = 'Reset your Glowelle account password.';
+$pageTitle = 'Forgot Password — MADIXX';
+$metaDescription = 'Reset your MADIXX account password.';
 $canonicalPath = 'forgot-password.php';
 
 require __DIR__ . '/includes/header.php';

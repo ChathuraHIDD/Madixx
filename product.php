@@ -9,7 +9,7 @@ $product = $slug !== '' ? get_product_by_slug($slug) : null;
 
 if (!$product) {
     http_response_code(404);
-    $pageTitle = 'Product Not Found — Glowelle';
+    $pageTitle = 'Product Not Found — MADIXX';
     require __DIR__ . '/includes/header.php';
     echo '<div class="empty-state"><i class="fa-regular fa-face-frown"></i><h2>Product not found</h2><p>This product may have been removed or is no longer available.</p><a href="' . e(base_url('shop.php')) . '" class="btn btn-primary">Continue Shopping</a></div>';
     require __DIR__ . '/includes/footer.php';
@@ -45,7 +45,7 @@ $relatedStmt = db()->prepare(
 $relatedStmt->execute(['cid' => $product['category_id'], 'pid' => $product['id']]);
 $relatedProducts = $relatedStmt->fetchAll();
 
-$pageTitle = $product['name'] . ' — Glowelle';
+$pageTitle = $product['name'] . ' — MADIXX';
 $metaDescription = $product['short_description'] ?: $product['name'];
 $canonicalPath = 'product.php?slug=' . $product['slug'];
 $ogImage = base_url($product['image']);
@@ -261,7 +261,7 @@ document.getElementById('reviewForm')?.addEventListener('submit', async function
   const msg = document.getElementById('reviewFormMessage');
   const data = new URLSearchParams(new FormData(form));
   data.set('product_id', form.dataset.productId);
-  const res = await fetch(window.GLOWELLE.baseUrl + 'ajax/submit_review.php', {
+  const res = await fetch(window.MADIXX.baseUrl + 'ajax/submit_review.php', {
     method: 'POST',
     headers: { 'X-Requested-With': 'XMLHttpRequest' },
     body: data,

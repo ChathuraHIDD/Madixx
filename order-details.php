@@ -25,7 +25,7 @@ $statuses = ['pending', 'confirmed', 'processing', 'shipped', 'delivered'];
 $currentIndex = array_search($order['order_status'], $statuses, true);
 
 $activeAccountPage = 'orders';
-$pageTitle = 'Order #' . $order['order_number'] . ' — Glowelle';
+$pageTitle = 'Order #' . $order['order_number'] . ' — MADIXX';
 $canonicalPath = 'order-details.php?id=' . $orderId;
 
 require __DIR__ . '/includes/header.php';

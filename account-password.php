@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $activeAccountPage = 'password';
-$pageTitle = 'Change Password — Glowelle';
+$pageTitle = 'Change Password — MADIXX';
 $canonicalPath = 'account-password.php';
 
 require __DIR__ . '/includes/header.php';

@@ -17,7 +17,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="<?= e(base_url('index.php')) ?>" class="logo">GLOWELLE</a>
+      <a href="<?= e(base_url('index.php')) ?>" class="logo">MADIXX</a>
       <p>Skincare and cosmetics designed to enhance your natural glow.</p>
       <div class="social-links">
         <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -59,7 +59,7 @@
   </div>
 
   <div class="container footer-bottom">
-    <p>&copy; <?= date('Y') ?> Glowelle. All rights reserved.</p>
+    <p>&copy; <?= date('Y') ?> MADIXX. All rights reserved.</p>
     <p>Crafted with care for your everyday ritual.</p>
   </div>
 </footer>

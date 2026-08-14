@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'About Us — Glowelle';
-$metaDescription = 'Learn about Glowelle — premium skincare and cosmetics designed to enhance your natural glow.';
+$pageTitle = 'About Us — MADIXX';
+$metaDescription = 'Learn about MADIXX — premium skincare and cosmetics designed to enhance your natural glow.';
 $canonicalPath = 'about.php';
 
 require __DIR__ . '/includes/header.php';
@@ -15,7 +15,7 @@ require __DIR__ . '/includes/header.php';
   <div class="hero-content" style="margin:0 auto;text-align:center;max-width:640px;">
     <p class="eyebrow">Our Story</p>
     <h1>Beauty, Refined.</h1>
-    <p style="margin:0 auto;">Glowelle was founded on a simple belief: that skincare should feel like a ritual, not a routine.</p>
+    <p style="margin:0 auto;">MADIXX was founded on a simple belief: that skincare should feel like a ritual, not a routine.</p>
   </div>
 </section>
 
@@ -24,10 +24,10 @@ require __DIR__ . '/includes/header.php';
     <div>
       <p class="eyebrow">Our Philosophy</p>
       <h2>Skincare As Self-Respect</h2>
-      <p style="color:var(--text-muted);margin-bottom:1.4em;">Every Glowelle formula begins with a question: does this deserve a place in someone's daily ritual? We start with clinically-proven actives, refine every texture until it feels effortless, and never compromise on what goes into the bottle.</p>
+      <p style="color:var(--text-muted);margin-bottom:1.4em;">Every MADIXX formula begins with a question: does this deserve a place in someone's daily ritual? We start with clinically-proven actives, refine every texture until it feels effortless, and never compromise on what goes into the bottle.</p>
       <p style="color:var(--text-muted);">The result is a collection of skincare and cosmetics that performs as beautifully as it feels — quietly luxurious, thoughtfully formulated, and made to be lived in.</p>
     </div>
-    <img src="<?= e(base_url('assets/images/placeholder-category.jpg')) ?>" alt="The Glowelle studio" loading="lazy">
+    <img src="<?= e(base_url('assets/images/placeholder-category.jpg')) ?>" alt="The MADIXX studio" loading="lazy">
   </div>
 </section>
 
@@ -46,7 +46,7 @@ require __DIR__ . '/includes/header.php';
       <div>
         <i class="fa-solid fa-paw"></i>
         <h3 style="font-size:1.1rem;">Cruelty-Free</h3>
-        <p style="color:var(--text-muted);font-size:0.92rem;">Glowelle is never tested on animals, at any stage of development.</p>
+        <p style="color:var(--text-muted);font-size:0.92rem;">MADIXX is never tested on animals, at any stage of development.</p>
       </div>
       <div>
         <i class="fa-solid fa-heart"></i>

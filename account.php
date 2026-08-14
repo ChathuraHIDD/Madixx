@@ -31,7 +31,7 @@ $recentStmt->execute(['uid' => $uid]);
 $recentOrders = $recentStmt->fetchAll();
 
 $activeAccountPage = 'dashboard';
-$pageTitle = 'My Account — Glowelle';
+$pageTitle = 'My Account — MADIXX';
 $canonicalPath = 'account.php';
 
 require __DIR__ . '/includes/header.php';
@@ -45,7 +45,7 @@ require __DIR__ . '/includes/header.php';
 
     <div>
       <h1 style="font-size:1.9rem;margin-bottom:8px;">Welcome, <?= e($user['name']) ?></h1>
-      <p style="color:var(--text-muted);margin-bottom:32px;">Here's an overview of your Glowelle account.</p>
+      <p style="color:var(--text-muted);margin-bottom:32px;">Here's an overview of your MADIXX account.</p>
 
       <div class="stat-grid">
         <div class="stat-card"><div class="stat-num"><?= $totalOrders ?></div><div class="stat-label">Total Orders</div></div>

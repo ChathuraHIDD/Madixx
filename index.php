@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Glowelle — Beauty, Refined. Premium Skincare & Cosmetics';
-$metaDescription = 'Discover Glowelle: premium skincare and cosmetics designed to enhance your natural glow. Shop bestselling serums, foundation, body care and more.';
+$pageTitle = 'MADIXX — Beauty, Refined. Premium Skincare & Cosmetics';
+$metaDescription = 'Discover MADIXX: premium skincare and cosmetics designed to enhance your natural glow. Shop bestselling serums, foundation, body care and more.';
 $canonicalPath = '';
 
 $wishlistIds = get_wishlist_product_ids();
@@ -31,12 +31,12 @@ require __DIR__ . '/includes/header.php';
 
 <section class="hero">
   <div class="hero-content">
-    <p class="eyebrow">Glowelle</p>
+    <p class="eyebrow">MADIXX</p>
     <h1>Beauty, Refined.</h1>
     <p>Discover skincare and cosmetics designed to enhance your natural glow.</p>
     <div class="hero-actions">
       <a href="<?= e(base_url('shop.php')) ?>" class="btn btn-primary">Shop Collection</a>
-      <a href="<?= e(base_url('about.php')) ?>" class="btn btn-outline">Discover Glowelle</a>
+      <a href="<?= e(base_url('about.php')) ?>" class="btn btn-outline">Discover MADIXX</a>
     </div>
   </div>
 </section>
@@ -67,7 +67,7 @@ require __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="section-heading text-center">
       <p class="eyebrow">Customer Favorites</p>
-      <h2>The Glowelle Edit</h2>
+      <h2>The MADIXX Edit</h2>
       <p>Our most-loved formulas, chosen by you.</p>
     </div>
     <div class="product-grid">
@@ -83,11 +83,11 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section fade-in">
   <div class="container editorial-split">
-    <img src="<?= e(base_url('assets/images/placeholder-category.jpg')) ?>" alt="The Glowelle ritual" loading="lazy">
+    <img src="<?= e(base_url('assets/images/placeholder-category.jpg')) ?>" alt="The MADIXX ritual" loading="lazy">
     <div>
       <p class="eyebrow">Our Philosophy</p>
       <h2>Skincare As Self-Respect</h2>
-      <p style="color:var(--text-muted);margin-bottom:1.6em;">Every Glowelle formula is built on clinically-proven actives, gentle textures and a quiet kind of luxury. We believe your routine should feel like a ritual, not a chore.</p>
+      <p style="color:var(--text-muted);margin-bottom:1.6em;">Every MADIXX formula is built on clinically-proven actives, gentle textures and a quiet kind of luxury. We believe your routine should feel like a ritual, not a chore.</p>
       <a href="<?= e(base_url('about.php')) ?>" class="btn btn-primary">Discover Our Story</a>
     </div>
   </div>

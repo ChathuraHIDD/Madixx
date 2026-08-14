@@ -31,7 +31,7 @@ $val = static fn (string $key, $default = '') => e((string) ($p[$key] ?? $defaul
           <?php endforeach; ?>
         </select>
       </div>
-      <div class="form-group"><label>Brand</label><input type="text" name="brand" value="<?= $val('brand', 'Glowelle') ?>"></div>
+      <div class="form-group"><label>Brand</label><input type="text" name="brand" value="<?= $val('brand', 'MADIXX') ?>"></div>
     </div>
     <div class="form-row">
       <div class="form-group"><label>Product Type</label><input type="text" name="product_type" placeholder="Serum, Cleanser, Lipstick…" value="<?= $val('product_type') ?>"></div>

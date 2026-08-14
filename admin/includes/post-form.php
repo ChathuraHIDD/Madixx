@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /** Expects $post (array or null), $errors before include. */
 $post ??= [];
-$categories = ['Skincare Tips', 'Makeup Tips', 'Beauty Routines', 'Ingredients', 'Glowelle News'];
+$categories = ['Skincare Tips', 'Makeup Tips', 'Beauty Routines', 'Ingredients', 'MADIXX News'];
 $val = static fn (string $key, $default = '') => e((string) ($post[$key] ?? $default));
 ?>
 <?php if ($errors): ?>
@@ -25,7 +25,7 @@ $val = static fn (string $key, $default = '') => e((string) ($post[$key] ?? $def
           <?php endforeach; ?>
         </select>
       </div>
-      <div class="form-group"><label>Author</label><input type="text" name="author" value="<?= $val('author', 'Glowelle Team') ?>"></div>
+      <div class="form-group"><label>Author</label><input type="text" name="author" value="<?= $val('author', 'MADIXX Team') ?>"></div>
     </div>
     <div class="form-group"><label>Excerpt</label><textarea name="excerpt"><?= $val('excerpt') ?></textarea></div>
     <div class="form-group"><label>Content (HTML supported, e.g. &lt;p&gt; paragraphs)</label><textarea name="content" required style="min-height:260px;"><?= $val('content') ?></textarea></div>

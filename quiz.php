@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Beauty Quiz — Find Your Glow — Glowelle';
-$metaDescription = 'Take the Glowelle Beauty Quiz and get personalized skincare recommendations in under a minute.';
+$pageTitle = 'Beauty Quiz — Find Your Glow — MADIXX';
+$metaDescription = 'Take the MADIXX Beauty Quiz and get personalized skincare recommendations in under a minute.';
 $canonicalPath = 'quiz.php';
 
 require __DIR__ . '/includes/header.php';
@@ -58,7 +58,7 @@ require __DIR__ . '/includes/header.php';
   <div id="quizResults" style="display:none;margin-top:24px;">
     <div class="text-center" style="margin-bottom:32px;">
       <p class="eyebrow">Personalized For You</p>
-      <h2>Your Glowelle Recommendations</h2>
+      <h2>Your MADIXX Recommendations</h2>
     </div>
     <div class="product-grid" id="quizResultsGrid"></div>
     <div class="text-center" style="margin-top:40px;">
@@ -69,7 +69,7 @@ require __DIR__ . '/includes/header.php';
 
 <script>
 (function () {
-  const CFG = window.GLOWELLE;
+  const CFG = window.MADIXX;
   const answers = {};
   let currentStep = 1;
   const totalSteps = 3;

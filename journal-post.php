@@ -12,7 +12,7 @@ $post = $stmt->fetch();
 
 if (!$post) {
     http_response_code(404);
-    $pageTitle = 'Article Not Found — Glowelle';
+    $pageTitle = 'Article Not Found — MADIXX';
     require __DIR__ . '/includes/header.php';
     echo '<div class="empty-state"><i class="fa-regular fa-face-frown"></i><h2>Article not found</h2><a href="' . e(base_url('journal.php')) . '" class="btn btn-primary">Back to Journal</a></div>';
     require __DIR__ . '/includes/footer.php';
@@ -23,7 +23,7 @@ $relatedStmt = db()->prepare('SELECT * FROM blog_posts WHERE category = :cat AND
 $relatedStmt->execute(['cat' => $post['category'], 'id' => $post['id']]);
 $related = $relatedStmt->fetchAll();
 
-$pageTitle = $post['title'] . ' — Glowelle Journal';
+$pageTitle = $post['title'] . ' — MADIXX Journal';
 $metaDescription = $post['excerpt'] ?: $post['title'];
 $canonicalPath = 'journal-post.php?slug=' . $post['slug'];
 $ogImage = base_url($post['featured_image']);

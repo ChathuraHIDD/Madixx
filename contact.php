@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = 'Contact Us — Glowelle';
-$metaDescription = 'Get in touch with the Glowelle team — we would love to hear from you.';
+$pageTitle = 'Contact Us — MADIXX';
+$metaDescription = 'Get in touch with the MADIXX team — we would love to hear from you.';
 $canonicalPath = 'contact.php';
 
 require __DIR__ . '/includes/header.php';
@@ -50,7 +50,7 @@ require __DIR__ . '/includes/header.php';
 
       <div style="margin-bottom:20px;">
         <h4 style="font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">Email</h4>
-        <p>hello@glowelle.com</p>
+        <p>hello@madixx.com</p>
       </div>
       <div style="margin-bottom:20px;">
         <h4 style="font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">Phone</h4>

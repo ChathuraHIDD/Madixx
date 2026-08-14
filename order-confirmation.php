@@ -15,7 +15,7 @@ $forbidden = $order && $order['user_id'] !== null
 
 if (!$order || $forbidden) {
     http_response_code(404);
-    $pageTitle = 'Order Not Found — Glowelle';
+    $pageTitle = 'Order Not Found — MADIXX';
     require __DIR__ . '/includes/header.php';
     echo '<div class="empty-state"><i class="fa-regular fa-face-frown"></i><h2>Order not found</h2><p>We could not find that order.</p><a href="' . e(base_url('index.php')) . '" class="btn btn-primary">Back to Home</a></div>';
     require __DIR__ . '/includes/footer.php';
@@ -26,8 +26,8 @@ $itemsStmt = db()->prepare('SELECT * FROM order_items WHERE order_id = :id');
 $itemsStmt->execute(['id' => $order['id']]);
 $orderItems = $itemsStmt->fetchAll();
 
-$pageTitle = 'Order Confirmed — Glowelle';
-$metaDescription = 'Your Glowelle order has been placed successfully.';
+$pageTitle = 'Order Confirmed — MADIXX';
+$metaDescription = 'Your MADIXX order has been placed successfully.';
 $canonicalPath = 'order-confirmation.php';
 
 require __DIR__ . '/includes/header.php';
@@ -71,7 +71,7 @@ require __DIR__ . '/includes/header.php';
 
   <?php if ($order['payment_method'] === 'bank_transfer'): ?>
   <div class="flash flash-success" style="margin:0 0 32px;max-width:none;">
-    <strong>Bank Transfer Details:</strong> Glowelle Beauty Ltd · Account #0123-4567-8901 · Please use your order number as the payment reference. Your order will be confirmed once payment is received.
+    <strong>Bank Transfer Details:</strong> MADIXX Beauty Ltd · Account #0123-4567-8901 · Please use your order number as the payment reference. Your order will be confirmed once payment is received.
   </div>
   <?php endif; ?>
 

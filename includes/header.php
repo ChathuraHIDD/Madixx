@@ -10,8 +10,8 @@ declare(strict_types=1);
  *   $bodyClass        string
  *   $ogImage          string
  */
-$pageTitle ??= 'Glowelle — Beauty, Refined.';
-$metaDescription ??= 'Glowelle is a premium skincare and cosmetics destination — discover products designed to enhance your natural glow.';
+$pageTitle ??= 'MADIXX — Beauty, Refined.';
+$metaDescription ??= 'MADIXX is a premium skincare and cosmetics destination — discover products designed to enhance your natural glow.';
 $canonicalPath ??= trim(strtok($_SERVER['REQUEST_URI'] ?? '', '?'), '/');
 $bodyClass ??= '';
 $ogImage ??= base_url('assets/images/placeholder-hero.jpg');
@@ -30,7 +30,7 @@ $user = current_user();
 <meta property="og:title" content="<?= e($pageTitle) ?>">
 <meta property="og:description" content="<?= e($metaDescription) ?>">
 <meta property="og:image" content="<?= e($ogImage) ?>">
-<meta property="og:site_name" content="Glowelle">
+<meta property="og:site_name" content="MADIXX">
 <link rel="icon" type="image/jpeg" href="<?= e(base_url('assets/images/favicon.jpg')) ?>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@ $user = current_user();
 </head>
 <body class="<?= e($bodyClass) ?>">
 <script>
-  window.GLOWELLE = {
+  window.MADIXX = {
     baseUrl: <?= json_encode(BASE_URL) ?>,
     csrfToken: <?= json_encode(csrf_token()) ?>,
     isLoggedIn: <?= $user ? 'true' : 'false' ?>
@@ -60,7 +60,7 @@ $user = current_user();
       <span></span><span></span><span></span>
     </button>
 
-    <a href="<?= e(base_url('index.php')) ?>" class="logo">GLOWELLE</a>
+    <a href="<?= e(base_url('index.php')) ?>" class="logo">MADIXX</a>
 
     <nav class="main-nav" aria-label="Primary">
       <ul>

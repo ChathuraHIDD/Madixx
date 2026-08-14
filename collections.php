@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Collections — Glowelle';
-$metaDescription = 'Explore curated Glowelle collections: bestsellers, new arrivals, featured formulas and the Glow Essentials edit.';
+$pageTitle = 'Collections — MADIXX';
+$metaDescription = 'Explore curated MADIXX collections: bestsellers, new arrivals, featured formulas and the Glow Essentials edit.';
 $canonicalPath = 'collections.php';
 
 $wishlistIds = get_wishlist_product_ids();
@@ -27,7 +27,7 @@ function fetch_shelf(PDO $pdo, string $flagColumn, int $limit = 4): array
 
 $shelves = [
     ['title' => 'Bestsellers', 'desc' => 'The formulas our customers can\'t live without.', 'items' => fetch_shelf($pdo, 'is_bestseller')],
-    ['title' => 'New Arrivals', 'desc' => 'Just landed — fresh additions to the Glowelle edit.', 'items' => fetch_shelf($pdo, 'is_new')],
+    ['title' => 'New Arrivals', 'desc' => 'Just landed — fresh additions to the MADIXX edit.', 'items' => fetch_shelf($pdo, 'is_new')],
     ['title' => 'Featured', 'desc' => 'This season\'s must-haves, hand-picked by our team.', 'items' => fetch_shelf($pdo, 'is_featured')],
 ];
 

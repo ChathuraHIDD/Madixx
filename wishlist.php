@@ -13,8 +13,8 @@ $stmt = db()->prepare(
 $stmt->execute(['uid' => current_user_id()]);
 $items = $stmt->fetchAll();
 
-$pageTitle = 'My Wishlist — Glowelle';
-$metaDescription = 'View and manage the products you have saved to your Glowelle wishlist.';
+$pageTitle = 'My Wishlist — MADIXX';
+$metaDescription = 'View and manage the products you have saved to your MADIXX wishlist.';
 $canonicalPath = 'wishlist.php';
 
 require __DIR__ . '/includes/header.php';
@@ -79,7 +79,7 @@ window.onWishlistPageUpdate = function (productId) {
 document.querySelectorAll('.move-to-cart-btn').forEach((btn) => {
   btn.addEventListener('click', async () => {
     if (btn.disabled) return;
-    const CFG = window.GLOWELLE;
+    const CFG = window.MADIXX;
     btn.disabled = true;
     const productId = btn.dataset.productId;
     try {

@@ -55,8 +55,8 @@ $skinTypes = ['Dry', 'Oily', 'Combination', 'Normal', 'Sensitive', 'All Skin Typ
 
 $wishlistIds = get_wishlist_product_ids();
 
-$pageTitle = ($activeCategory ? $activeCategory['name'] : 'Shop All') . ' — Glowelle';
-$metaDescription = $activeCategory ? $activeCategory['description'] : 'Shop the full Glowelle collection of premium skincare, makeup and body care.';
+$pageTitle = ($activeCategory ? $activeCategory['name'] : 'Shop All') . ' — MADIXX';
+$metaDescription = $activeCategory ? $activeCategory['description'] : 'Shop the full MADIXX collection of premium skincare, makeup and body care.';
 $canonicalPath = 'shop.php' . ($categorySlug ? '?category=' . $categorySlug : '');
 
 require __DIR__ . '/includes/header.php';

@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $reset) {
     }
 }
 
-$pageTitle = 'Reset Password — Glowelle';
+$pageTitle = 'Reset Password — MADIXX';
 $canonicalPath = 'reset-password.php';
 
 require __DIR__ . '/includes/header.php';

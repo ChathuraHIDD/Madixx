@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $activeAccountPage = 'profile';
-$pageTitle = 'My Profile — Glowelle';
+$pageTitle = 'My Profile — MADIXX';
 $canonicalPath = 'account-profile.php';
 
 require __DIR__ . '/includes/header.php';

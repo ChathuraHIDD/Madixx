@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'content'  => $content,
             'image'    => $image,
             'category' => trim((string) ($_POST['category'] ?? '')),
-            'author'   => trim((string) ($_POST['author'] ?? 'Glowelle Team')),
+            'author'   => trim((string) ($_POST['author'] ?? 'MADIXX Team')),
             'status'   => in_array($_POST['status'] ?? '', ['published', 'draft'], true) ? $_POST['status'] : 'draft',
             'id'       => $postId,
         ]);

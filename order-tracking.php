@@ -16,8 +16,8 @@ if ($orderNumber !== '') {
 $statuses = ['pending', 'confirmed', 'processing', 'shipped', 'delivered'];
 $currentIndex = $order ? array_search($order['order_status'], $statuses, true) : false;
 
-$pageTitle = 'Track Your Order — Glowelle';
-$metaDescription = 'Track the status of your Glowelle order.';
+$pageTitle = 'Track Your Order — MADIXX';
+$metaDescription = 'Track the status of your MADIXX order.';
 $canonicalPath = 'order-tracking.php';
 
 require __DIR__ . '/includes/header.php';

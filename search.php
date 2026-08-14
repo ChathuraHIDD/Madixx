@@ -20,8 +20,8 @@ if ($query !== '') {
     [$products, $total, $totalPages, $page] = query_products($filters, $page, 12);
 }
 
-$pageTitle = 'Search results for "' . $query . '" — Glowelle';
-$metaDescription = 'Search results for "' . $query . '" on Glowelle.';
+$pageTitle = 'Search results for "' . $query . '" — MADIXX';
+$metaDescription = 'Search results for "' . $query . '" on MADIXX.';
 $canonicalPath = 'search.php?q=' . urlencode($query);
 
 require __DIR__ . '/includes/header.php';

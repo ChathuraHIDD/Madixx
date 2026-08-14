@@ -7,8 +7,8 @@ require_once __DIR__ . '/includes/init.php';
 $items = get_cart_items();
 $totals = get_cart_totals($items);
 
-$pageTitle = 'Your Bag — Glowelle';
-$metaDescription = 'Review the items in your Glowelle shopping bag.';
+$pageTitle = 'Your Bag — MADIXX';
+$metaDescription = 'Review the items in your MADIXX shopping bag.';
 $canonicalPath = 'cart.php';
 
 require __DIR__ . '/includes/header.php';
@@ -77,7 +77,7 @@ require __DIR__ . '/includes/header.php';
 
 <script>
 (function () {
-  const CFG = window.GLOWELLE;
+  const CFG = window.MADIXX;
   function money(n) { return '$' + Number(n).toFixed(2); }
 
   function updateSummary(data) {

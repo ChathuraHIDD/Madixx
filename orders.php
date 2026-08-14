@@ -22,7 +22,7 @@ $stmt->execute();
 $orders = $stmt->fetchAll();
 
 $activeAccountPage = 'orders';
-$pageTitle = 'My Orders — Glowelle';
+$pageTitle = 'My Orders — MADIXX';
 $canonicalPath = 'orders.php';
 
 require __DIR__ . '/includes/header.php';

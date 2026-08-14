@@ -46,13 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userId = (int) db()->lastInsertId();
         login_user(['id' => $userId, 'name' => $name, 'role' => 'customer']);
 
-        flash('success', 'Welcome to Glowelle, ' . $name . '!');
+        flash('success', 'Welcome to MADIXX, ' . $name . '!');
         redirect('account.php');
     }
 }
 
-$pageTitle = 'Create an Account — Glowelle';
-$metaDescription = 'Create your Glowelle account to track orders, save your wishlist and check out faster.';
+$pageTitle = 'Create an Account — MADIXX';
+$metaDescription = 'Create your MADIXX account to track orders, save your wishlist and check out faster.';
 $canonicalPath = 'register.php';
 
 require __DIR__ . '/includes/header.php';
@@ -60,7 +60,7 @@ require __DIR__ . '/includes/header.php';
 
 <div class="auth-wrap">
   <h1>Create an Account</h1>
-  <p class="text-center">Join Glowelle for faster checkout, order tracking and wishlists.</p>
+  <p class="text-center">Join MADIXX for faster checkout, order tracking and wishlists.</p>
 
   <?php if ($errors): ?>
   <div class="flash flash-error" style="max-width:none;margin:0 0 24px;"><?= implode('<br>', array_map('e', $errors)) ?></div>
