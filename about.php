@@ -11,23 +11,25 @@ $canonicalPath = 'about.php';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<section class="hero" style="min-height:420px;">
-  <div class="hero-content" style="margin:0 auto;text-align:center;max-width:640px;">
+<section class="hero" style="min-height:420px;background-image:url('<?= e(base_url('assets/images/abouthero.png')) ?>');">
+  <div class="hero-content">
     <p class="eyebrow">Our Story</p>
     <h1>See Clearly. Stand Out.</h1>
-    <p style="margin:0 auto;">MADIXX was founded on a simple belief: that eyewear should feel like a natural extension of you, not an accessory you settle for.</p>
+    <p>MADIXX was founded on a simple belief: that eyewear should feel like a natural extension of you, not an accessory you settle for.</p>
   </div>
 </section>
 
 <section class="section fade-in">
   <div class="container editorial-split">
     <div>
-      <p class="eyebrow">Our Philosophy</p>
-      <h2>Eyewear As Self-Expression</h2>
-      <p style="color:var(--text-muted);margin-bottom:1.4em;">Every MADIXX frame begins with a question: does this deserve a place on someone's face, every single day? We start with durable materials, refine every fit until it feels effortless, and never compromise on lens quality.</p>
-      <p style="color:var(--text-muted);">The result is a collection of sunglasses, spectacles and accessories that performs as beautifully as it looks — quietly confident, precisely made, and built to be worn.</p>
+      <p class="eyebrow">Meet The Founder</p>
+      <h2>Ms. Geraldine Salanguste</h2>
+      <p style="color:var(--text-light);font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;margin-top:-0.8em;margin-bottom:1.2em;">Founding Partner &amp; Head of Operations and Marketing</p>
+      <p style="color:var(--text-muted);margin-bottom:1.2em;">Ms. Geraldine Salanguste, a founding partner of the BatteryLab Group of companies, is an experienced mass media and social media marketer. She managed print and digital ad accounts for Yell.com and held multiple roles in customer service and sales in the Philippines.</p>
+      <p style="color:var(--text-muted);margin-bottom:1.2em;">She attended Centro Escolar University for her undergraduate studies in Mass Communications, and has since obtained multiple advanced certifications in Social Media Marketing, Generative AI, and Customer Loyalty programs.</p>
+      <p style="color:var(--text-muted);">At MADIXX, Geraldine oversees company operations and marketing — bringing the same precision and customer-first thinking to eyewear that she built her career on.</p>
     </div>
-    <img src="<?= e(base_url('assets/images/hero.png')) ?>" alt="The MADIXX studio" loading="lazy">
+    <img src="<?= e(base_url('assets/images/founder.png')) ?>" alt="Ms. Geraldine Salanguste, Founder of MADIXX" loading="lazy">
   </div>
 </section>
 
