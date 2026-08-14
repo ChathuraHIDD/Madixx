@@ -105,13 +105,13 @@ $user = current_user();
   <ul>
     <li><a href="<?= e(base_url('index.php')) ?>">Home</a></li>
     <li><a href="<?= e(base_url('shop.php')) ?>">Shop</a></li>
-    <li><a href="<?= e(base_url('skincare.php')) ?>">Skincare</a></li>
-    <li><a href="<?= e(base_url('makeup.php')) ?>">Makeup</a></li>
-    <li><a href="<?= e(base_url('body.php')) ?>">Body</a></li>
+    <li><a href="<?= e(base_url('sunglasses.php')) ?>">Sunglasses</a></li>
+    <li><a href="<?= e(base_url('spectacles.php')) ?>">Spectacles</a></li>
+    <li><a href="<?= e(base_url('accessories.php')) ?>">Accessories</a></li>
     <li><a href="<?= e(base_url('collections.php')) ?>">Collections</a></li>
     <li><a href="<?= e(base_url('journal.php')) ?>">Journal</a></li>
     <li><a href="<?= e(base_url('about.php')) ?>">About</a></li>
-    <li><a href="<?= e(base_url('quiz.php')) ?>">Beauty Quiz</a></li>
+    <li><a href="<?= e(base_url('quiz.php')) ?>">Frame Finder Quiz</a></li>
     <li><a href="<?= e(base_url('contact.php')) ?>">Contact</a></li>
     <li class="mobile-nav-divider"></li>
     <li><a href="<?= e(base_url($user ? 'account.php' : 'login.php')) ?>"><?= $user ? 'My Account' : 'Login / Register' ?></a></li>
