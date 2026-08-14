@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = 'Login — Glowelle';
-$metaDescription = 'Log in to your Glowelle account.';
+$pageTitle = 'Login — MADIXX';
+$metaDescription = 'Log in to your MADIXX account.';
 $canonicalPath = 'login.php';
 
 require __DIR__ . '/includes/header.php';
@@ -48,7 +48,7 @@ require __DIR__ . '/includes/header.php';
 
 <div class="auth-wrap">
   <h1>Welcome Back</h1>
-  <p class="text-center">Log in to continue your Glowelle ritual.</p>
+  <p class="text-center">Log in to continue your MADIXX ritual.</p>
 
   <?php if ($errors): ?>
   <div class="flash flash-error" style="max-width:none;margin:0 0 24px;"><?= implode('<br>', array_map('e', $errors)) ?></div>
@@ -70,7 +70,7 @@ require __DIR__ . '/includes/header.php';
     <button type="submit" class="btn btn-primary btn-block">Log In</button>
   </form>
 
-  <p class="auth-links">New to Glowelle? <a href="<?= e(base_url('register.php')) ?>" style="text-decoration:underline;">Create an account</a></p>
+  <p class="auth-links">New to MADIXX? <a href="<?= e(base_url('register.php')) ?>" style="text-decoration:underline;">Create an account</a></p>
 </div>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>
