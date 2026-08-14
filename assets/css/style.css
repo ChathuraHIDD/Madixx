@@ -140,7 +140,10 @@ p { margin: 0 0 1em; }
   font-weight: 600;
   color: var(--text-dark);
   justify-self: start;
+  display: inline-flex;
+  align-items: center;
 }
+.logo-img { height: 38px; width: auto; display: block; }
 .main-nav ul { display: flex; gap: 28px; justify-content: center; }
 .main-nav a {
   font-size: 0.82rem;
