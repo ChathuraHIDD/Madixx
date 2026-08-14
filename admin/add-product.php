@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (!$errors) {
-        $mainImage = 'assets/images/placeholder-product.jpg';
+        $mainImage = 'assets/images/logo.png';
         if (!empty($_FILES['main_image']['name'])) {
             $uploaded = upload_image($_FILES['main_image'], 'products');
             if ($uploaded) {

@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (trim($post['content']) === '') $errors[] = 'Content is required.';
 
     if (!$errors) {
-        $image = 'assets/images/placeholder-blog.jpg';
+        $image = 'assets/images/hero.png';
         if (!empty($_FILES['featured_image']['name'])) {
             $uploaded = upload_image($_FILES['featured_image'], 'blog');
             if ($uploaded) $image = $uploaded;

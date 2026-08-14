@@ -6,28 +6,31 @@ require_once __DIR__ . '/../includes/init.php';
 header('Content-Type: application/json');
 csrf_require();
 
-$skinType = trim((string) ($_POST['skin_type'] ?? ''));
-$concern = trim((string) ($_POST['concern'] ?? ''));
-$goal = trim((string) ($_POST['goal'] ?? ''));
+$faceShape = trim((string) ($_POST['face_shape'] ?? ''));
+$useCase = trim((string) ($_POST['use_case'] ?? ''));
+$style = trim((string) ($_POST['style'] ?? ''));
 
-$concernTypes = [
-    'Acne'        => ['Cleanser', 'Toner'],
-    'Dryness'     => ['Moisturizer', 'Body Butter', 'Body Oil'],
-    'Dullness'    => ['Serum'],
-    'Aging'       => ['Night Cream', 'Serum'],
-    'Sensitivity' => ['Moisturizer', 'Cleanser'],
+$faceShapeTypes = [
+    'Round'  => ['Square', 'Geometric', 'Browline'],
+    'Oval'   => ['Aviator', 'Square', 'Cat-Eye', 'Round'],
+    'Square' => ['Round', 'Oval', 'Cat-Eye'],
+    'Heart'  => ['Cat-Eye', 'Round', 'Oval'],
 ];
-$goalTypes = [
-    'Hydration'    => ['Moisturizer', 'Toner', 'Body Butter'],
-    'Brightening'  => ['Serum'],
-    'Anti-aging'   => ['Night Cream', 'Serum'],
-    'Skin barrier' => ['Moisturizer'],
-    'Glow'         => ['Serum', 'Body Oil'],
+$styleTypes = [
+    'Classic' => ['Aviator', 'Round', 'Clubmaster'],
+    'Bold'    => ['Square', 'Shield', 'Geometric', 'Cat-Eye'],
+    'Minimal' => ['Rimless', 'Oval', 'Square'],
+    'Vintage' => ['Round', 'Browline', 'Cat-Eye', 'Oval'],
+];
+$useCaseCategory = [
+    'Sun Protection'      => 'sunglasses',
+    'Prescription Vision' => 'spectacles',
 ];
 
-$types = array_values(array_unique(array_merge($concernTypes[$concern] ?? [], $goalTypes[$goal] ?? [])));
+$types = array_values(array_unique(array_merge($faceShapeTypes[$faceShape] ?? [], $styleTypes[$style] ?? [])));
+$categorySlug = $useCaseCategory[$useCase] ?? null;
 
-function run_recommendation_query(array $types, string $skinType, bool $withTypes): array
+function run_recommendation_query(array $types, ?string $categorySlug, bool $withTypes): array
 {
     $where = ['p.status = "active"'];
     $params = [];
@@ -42,9 +45,9 @@ function run_recommendation_query(array $types, string $skinType, bool $withType
         $where[] = 'p.product_type IN (' . implode(',', $placeholders) . ')';
     }
 
-    if ($skinType !== '') {
-        $where[] = '(p.skin_type LIKE :skin OR p.skin_type LIKE "%All Skin Types%")';
-        $params['skin'] = '%' . $skinType . '%';
+    if ($categorySlug !== null) {
+        $where[] = 'c.slug = :category_slug';
+        $params['category_slug'] = $categorySlug;
     }
 
     $sql = 'SELECT p.*, c.name AS category_name, c.slug AS category_slug
@@ -58,10 +61,10 @@ function run_recommendation_query(array $types, string $skinType, bool $withType
     return $stmt->fetchAll();
 }
 
-$products = run_recommendation_query($types, $skinType, true);
+$products = run_recommendation_query($types, $categorySlug, true);
 
 if (count($products) < 3) {
-    $products = run_recommendation_query([], $skinType, false);
+    $products = run_recommendation_query([], $categorySlug, false);
 }
 
 if (count($products) < 3) {

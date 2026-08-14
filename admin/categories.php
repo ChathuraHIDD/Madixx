@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 flash('success', 'Category updated.');
             } else {
                 $pdo->prepare('INSERT INTO categories (name, slug, description, image) VALUES (:name, :slug, :description, :image)')
-                    ->execute(['name' => $name, 'slug' => $slug, 'description' => $description, 'image' => $image ?: 'assets/images/placeholder-category.jpg']);
+                    ->execute(['name' => $name, 'slug' => $slug, 'description' => $description, 'image' => $image ?: 'assets/images/logo.png']);
                 flash('success', 'Category created.');
             }
             redirect('admin/categories.php');
