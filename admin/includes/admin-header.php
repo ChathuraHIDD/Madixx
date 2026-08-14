@@ -30,7 +30,7 @@ $navItems = [
 </script>
 <div class="admin-shell">
   <aside class="admin-sidebar" id="adminSidebar">
-    <a href="<?= e(base_url('admin/index.php')) ?>" class="logo">MADIXX</a>
+    <a href="<?= e(base_url('admin/index.php')) ?>" class="logo"><img src="<?= e(base_url('assets/images/logo.png')) ?>" alt="MADIXX" style="height:34px;width:auto;filter:brightness(0) invert(1);"></a>
     <nav class="admin-nav">
       <p class="nav-section">Manage</p>
       <?php foreach ($navItems as $key => $item): ?>
