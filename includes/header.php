@@ -51,7 +51,7 @@ $user = current_user();
 <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
 <div class="announcement-bar">
-  <p>FREE SHIPPING ON ORDERS OVER $75 &nbsp;•&nbsp; DISCOVER THE NEW GLOW COLLECTION</p>
+  <p>FREE SHIPPING ON ORDERS OVER $75 &nbsp;•&nbsp; UV400 PROTECTION ON EVERY PAIR</p>
 </div>
 
 <header class="site-header" id="site-header">
@@ -60,15 +60,15 @@ $user = current_user();
       <span></span><span></span><span></span>
     </button>
 
-    <a href="<?= e(base_url('index.php')) ?>" class="logo">MADIXX</a>
+    <a href="<?= e(base_url('index.php')) ?>" class="logo"><img src="<?= e(base_url('assets/images/logo.png')) ?>" alt="MADIXX" class="logo-img"></a>
 
     <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="<?= e(base_url('index.php')) ?>">Home</a></li>
         <li><a href="<?= e(base_url('shop.php')) ?>">Shop</a></li>
-        <li><a href="<?= e(base_url('skincare.php')) ?>">Skincare</a></li>
-        <li><a href="<?= e(base_url('makeup.php')) ?>">Makeup</a></li>
-        <li><a href="<?= e(base_url('body.php')) ?>">Body</a></li>
+        <li><a href="<?= e(base_url('sunglasses.php')) ?>">Sunglasses</a></li>
+        <li><a href="<?= e(base_url('spectacles.php')) ?>">Spectacles</a></li>
+        <li><a href="<?= e(base_url('accessories.php')) ?>">Accessories</a></li>
         <li><a href="<?= e(base_url('collections.php')) ?>">Collections</a></li>
         <li><a href="<?= e(base_url('journal.php')) ?>">Journal</a></li>
         <li><a href="<?= e(base_url('about.php')) ?>">About</a></li>
