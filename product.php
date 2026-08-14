@@ -147,13 +147,13 @@ require __DIR__ . '/includes/header.php';
       <ul class="ingredient-list">
         <?php foreach ($ingredientsList as $ing): ?><li><?= e($ing) ?></li><?php endforeach; ?>
       </ul>
-      <?php else: ?><p>Full ingredient list available on packaging.</p><?php endif; ?>
+      <?php else: ?><p>Full specifications available on request.</p><?php endif; ?>
     </div>
 
     <div class="tab-panel" id="tab-howto">
       <p><?= nl2br(e($product['how_to_use'])) ?></p>
       <?php if ($product['skin_type']): ?>
-      <p style="margin-top:20px;"><strong>Suitable for:</strong> <?= e($product['skin_type']) ?></p>
+      <p style="margin-top:20px;"><strong>Frame material:</strong> <?= e($product['skin_type']) ?></p>
       <?php endif; ?>
     </div>
 
