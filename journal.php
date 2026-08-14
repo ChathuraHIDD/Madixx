@@ -9,7 +9,7 @@ $searchQuery = trim((string) ($_GET['q'] ?? ''));
 $page = max(1, (int) ($_GET['page'] ?? 1));
 $perPage = 9;
 
-$categories = ['Skincare Tips', 'Makeup Tips', 'Beauty Routines', 'Ingredients', 'MADIXX News'];
+$categories = ['Style Guides', 'Lens Guides', 'Care Guides', 'Frame Guides', 'MADIXX News'];
 
 $featured = null;
 if ($categoryFilter === '' && $searchQuery === '' && $page === 1) {
@@ -49,8 +49,8 @@ $stmt->bindValue('offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
 $posts = $stmt->fetchAll();
 
-$pageTitle = 'The MADIXX Journal — Beauty Tips & Stories';
-$metaDescription = 'Skincare tips, makeup tutorials, beauty routines and ingredient deep-dives from the MADIXX team.';
+$pageTitle = 'The MADIXX Journal — Style & Care Guides';
+$metaDescription = 'Style guides, lens explainers, frame care tips and eyewear stories from the MADIXX team.';
 $canonicalPath = 'journal.php';
 
 require __DIR__ . '/includes/header.php';
@@ -60,8 +60,8 @@ require __DIR__ . '/includes/header.php';
   <?= render_breadcrumbs([['label' => 'Journal', 'url' => null]]) ?>
   <div class="section-heading" style="margin-bottom:32px;">
     <p class="eyebrow">The MADIXX Journal</p>
-    <h1 style="font-size:2.2rem;">Beauty Journal</h1>
-    <p>Skincare tips, routines and stories from our team.</p>
+    <h1 style="font-size:2.2rem;">Style Journal</h1>
+    <p>Frame guides, lens explainers and care tips from our team.</p>
   </div>
 
   <?php if ($featured): ?>

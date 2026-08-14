@@ -48,7 +48,7 @@ require __DIR__ . '/includes/header.php';
 
 <div class="auth-wrap">
   <h1>Welcome Back</h1>
-  <p class="text-center">Log in to continue your MADIXX ritual.</p>
+  <p class="text-center">Log in to continue shopping with MADIXX.</p>
 
   <?php if ($errors): ?>
   <div class="flash flash-error" style="max-width:none;margin:0 0 24px;"><?= implode('<br>', array_map('e', $errors)) ?></div>

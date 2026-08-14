@@ -5,7 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/init.php';
 
 $pageTitle = 'Collections — MADIXX';
-$metaDescription = 'Explore curated MADIXX collections: bestsellers, new arrivals, featured formulas and the Glow Essentials edit.';
+$metaDescription = 'Explore curated MADIXX collections: bestsellers, new arrivals and featured frames.';
 $canonicalPath = 'collections.php';
 
 $wishlistIds = get_wishlist_product_ids();
@@ -26,19 +26,10 @@ function fetch_shelf(PDO $pdo, string $flagColumn, int $limit = 4): array
 }
 
 $shelves = [
-    ['title' => 'Bestsellers', 'desc' => 'The formulas our customers can\'t live without.', 'items' => fetch_shelf($pdo, 'is_bestseller')],
+    ['title' => 'Bestsellers', 'desc' => 'The frames our customers can\'t live without.', 'items' => fetch_shelf($pdo, 'is_bestseller')],
     ['title' => 'New Arrivals', 'desc' => 'Just landed — fresh additions to the MADIXX edit.', 'items' => fetch_shelf($pdo, 'is_new')],
     ['title' => 'Featured', 'desc' => 'This season\'s must-haves, hand-picked by our team.', 'items' => fetch_shelf($pdo, 'is_featured')],
 ];
-
-$glowStmt = $pdo->prepare(
-    "SELECT p.*, c.name AS category_name, c.slug AS category_slug
-     FROM products p JOIN categories c ON c.id = p.category_id
-     WHERE p.status = 'active' AND c.slug = 'glow-essentials'
-     ORDER BY p.created_at DESC"
-);
-$glowStmt->execute();
-$glowEssentials = $glowStmt->fetchAll();
 
 require __DIR__ . '/includes/header.php';
 ?>
@@ -69,21 +60,5 @@ require __DIR__ . '/includes/header.php';
   </div>
 </section>
 <?php endforeach; ?>
-
-<?php if ($glowEssentials): ?>
-<section class="section-tight fade-in" style="background:var(--color-blush);">
-  <div class="container">
-    <div style="margin-bottom:28px;">
-      <h2 style="margin-bottom:4px;">Glow Essentials</h2>
-      <p style="color:var(--text-muted);">Our most-loved beauty products, curated into one edit.</p>
-    </div>
-    <div class="product-grid">
-      <?php foreach ($glowEssentials as $product): ?>
-        <?php include __DIR__ . '/includes/product-card.php'; ?>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-<?php endif; ?>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

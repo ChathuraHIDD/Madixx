@@ -71,7 +71,7 @@ require __DIR__ . '/includes/header.php';
 
   <?php if ($order['payment_method'] === 'bank_transfer'): ?>
   <div class="flash flash-success" style="margin:0 0 32px;max-width:none;">
-    <strong>Bank Transfer Details:</strong> MADIXX Beauty Ltd · Account #0123-4567-8901 · Please use your order number as the payment reference. Your order will be confirmed once payment is received.
+    <strong>Bank Transfer Details:</strong> MADIXX Eyewear Ltd · Account #0123-4567-8901 · Please use your order number as the payment reference. Your order will be confirmed once payment is received.
   </div>
   <?php endif; ?>
 

@@ -15,7 +15,7 @@ function redirect(string $path): never
     exit;
 }
 
-/** Builds a site-root-relative URL, e.g. base_url('shop.php?category=skincare'). */
+/** Builds a site-root-relative URL, e.g. base_url('shop.php?category=sunglasses'). */
 function base_url(string $path = ''): string
 {
     return BASE_URL . ltrim($path, '/');
