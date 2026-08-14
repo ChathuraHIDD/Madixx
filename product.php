@@ -121,7 +121,7 @@ require __DIR__ . '/includes/header.php';
       <div class="pdp-meta">
         <div><strong>SKU:</strong> <?= e($product['sku']) ?></div>
         <div><strong>Brand:</strong> <?= e($product['brand']) ?></div>
-        <?php if ($product['skin_type']): ?><div><strong>Skin Type:</strong> <?= e($product['skin_type']) ?></div><?php endif; ?>
+        <?php if ($product['skin_type']): ?><div><strong>Frame Material:</strong> <?= e($product['skin_type']) ?></div><?php endif; ?>
       </div>
     </div>
   </div>
@@ -129,8 +129,8 @@ require __DIR__ . '/includes/header.php';
   <div class="pdp-tabs">
     <div class="tab-nav">
       <button type="button" class="tab-btn active" data-tab="tab-benefits">Why You'll Love It</button>
-      <button type="button" class="tab-btn" data-tab="tab-ingredients">Ingredients</button>
-      <button type="button" class="tab-btn" data-tab="tab-howto">How To Use</button>
+      <button type="button" class="tab-btn" data-tab="tab-ingredients">Frame &amp; Lens Details</button>
+      <button type="button" class="tab-btn" data-tab="tab-howto">Care &amp; Fit</button>
       <button type="button" class="tab-btn" data-tab="tab-reviews">Reviews (<?= (int) $product['review_count'] ?>)</button>
     </div>
 
