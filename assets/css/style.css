@@ -276,7 +276,7 @@ p { margin: 0 0 1em; }
   position: relative;
   min-height: 640px;
   display: flex; align-items: center;
-  background: url('../images/placeholder-hero.jpg') center/cover no-repeat;
+  background: url('../images/hero.png') center/cover no-repeat;
 }
 .hero-content { max-width: 560px; padding: 0 24px; margin-left: 8%; }
 .hero-content .eyebrow { color: var(--color-espresso); }
