@@ -68,7 +68,7 @@ require __DIR__ . '/includes/admin-header.php';
           <td><strong>#<?= e($order['order_number']) ?></strong></td>
           <td><?= e($order['customer_name']) ?><br><small style="color:var(--text-light);"><?= e($order['customer_email']) ?></small></td>
           <td><?= e(date('M j, Y', strtotime($order['created_at']))) ?></td>
-          <td><?= $order['payment_method'] === 'bank_transfer' ? 'Bank Transfer' : 'COD' ?></td>
+          <td><?= match ($order['payment_method']) { 'bank_transfer' => 'Bank Transfer', 'card' => 'Card (Stripe)', default => 'COD' } ?></td>
           <td><?= format_price($order['total']) ?></td>
           <td><span class="status-pill status-<?= e($order['order_status']) ?>"><?= e(ucfirst($order['order_status'])) ?></span></td>
           <td><a href="<?= e(base_url('admin/order-details.php?id=' . (int) $order['id'])) ?>" class="btn btn-outline btn-sm">View</a></td>

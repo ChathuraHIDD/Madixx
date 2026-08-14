@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/init.php';
 
 $faqs = [
     ['q' => 'How long does shipping take?', 'a' => 'Standard delivery takes 3–5 business days. Express delivery arrives in 1–2 business days. Orders over $75 qualify for free standard shipping.'],
-    ['q' => 'What payment methods do you accept?', 'a' => 'We currently accept Cash on Delivery and Bank Transfer. Online card payments are coming soon.'],
+    ['q' => 'What payment methods do you accept?', 'a' => 'We accept Credit/Debit Card (securely processed by Stripe), Cash on Delivery, and Bank Transfer.'],
     ['q' => 'Can I return or exchange a product?', 'a' => 'Yes — unused frames in original packaging can be returned within 14 days of delivery for a full refund. Please contact us to start a return.'],
     ['q' => 'Can I fit my own prescription lenses into MADIXX spectacles?', 'a' => 'Yes — every spectacle frame is sold unglazed and ready for your optician to fit with single-vision, progressive or blue-light lenses.'],
     ['q' => 'Do MADIXX sunglasses block UV rays?', 'a' => 'Every pair of MADIXX sunglasses meets the UV400 standard, blocking 100% of UVA and UVB rays.'],

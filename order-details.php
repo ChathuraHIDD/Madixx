@@ -81,7 +81,7 @@ require __DIR__ . '/includes/header.php';
         <div>
           <h4 style="font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-light);margin-bottom:10px;">Payment &amp; Delivery</h4>
           <p style="color:var(--text-muted);">
-            <?= $order['payment_method'] === 'bank_transfer' ? 'Bank Transfer' : 'Cash on Delivery' ?><br>
+            <?= match ($order['payment_method']) { 'bank_transfer' => 'Bank Transfer', 'card' => 'Card (Stripe)', default => 'Cash on Delivery' } ?><br>
             <?= $order['delivery_method'] === 'express' ? 'Express Delivery' : 'Standard Delivery' ?>
           </p>
         </div>

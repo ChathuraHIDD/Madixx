@@ -54,7 +54,7 @@ function format_price(float|string|null $amount): string
 /** Generates a unique, human-friendly order number from a numeric order id. */
 function generate_order_number(int $orderId): string
 {
-    return 'GW' . str_pad((string) (10000 + $orderId), 5, '0', STR_PAD_LEFT);
+    return 'MX' . str_pad((string) (10000 + $orderId), 5, '0', STR_PAD_LEFT);
 }
 
 /** Renders a 5-star rating as inline Font Awesome markup. */

@@ -115,7 +115,13 @@ require __DIR__ . '/includes/admin-header.php';
 
     <div class="admin-card">
       <h3>Payment</h3>
-      <p><?= $order['payment_method'] === 'bank_transfer' ? 'Bank Transfer' : 'Cash on Delivery' ?></p>
+      <p>
+        <?= match ($order['payment_method']) { 'bank_transfer' => 'Bank Transfer', 'card' => 'Card (Stripe)', default => 'Cash on Delivery' } ?>
+        &nbsp;<span class="status-pill status-<?= $order['payment_status'] === 'paid' ? 'active' : 'pending' ?>"><?= e(ucfirst($order['payment_status'])) ?></span>
+      </p>
+      <?php if (!empty($order['stripe_payment_intent'])): ?>
+      <p style="margin-top:8px;font-size:0.78rem;color:var(--text-light);word-break:break-all;">Payment Intent: <?= e($order['stripe_payment_intent']) ?></p>
+      <?php endif; ?>
     </div>
   </div>
 </div>
