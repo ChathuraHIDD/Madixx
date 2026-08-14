@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'MADIXX — Beauty, Refined. Premium Skincare & Cosmetics';
-$metaDescription = 'Discover MADIXX: premium skincare and cosmetics designed to enhance your natural glow. Shop bestselling serums, foundation, body care and more.';
+$pageTitle = 'MADIXX — Sunglasses, Spectacles & Eyewear Accessories';
+$metaDescription = 'Discover MADIXX: sunglasses, prescription-ready spectacles and eyewear accessories designed to see and be seen. Shop bestselling frames and more.';
 $canonicalPath = '';
 
 $wishlistIds = get_wishlist_product_ids();
@@ -20,10 +20,9 @@ $stmt->execute();
 $bestsellers = $stmt->fetchAll();
 
 $categoryTiles = [
-    ['slug' => 'skincare', 'name' => 'Skincare', 'desc' => 'Cleanser, serum, moisturizer and more.', 'image' => 'assets/images/skincare.png'],
-    ['slug' => 'makeup', 'name' => 'Makeup', 'desc' => 'Complexion, lips, eyes and more.', 'image' => 'assets/images/makeup.png'],
-    ['slug' => 'body-care', 'name' => 'Body Care', 'desc' => 'Nourish, hydrate and soften.', 'image' => 'assets/images/bodycare.png'],
-    ['slug' => 'glow-essentials', 'name' => 'Glow Essentials', 'desc' => 'Our most-loved beauty products.', 'image' => 'assets/images/glowessentials.png'],
+    ['slug' => 'sunglasses', 'name' => 'Sunglasses', 'desc' => 'UV400 protection in square, round, aviator and shield shapes.', 'image' => 'assets/images/p2.png'],
+    ['slug' => 'spectacles', 'name' => 'Spectacles', 'desc' => 'Prescription-ready optical frames for everyday clarity.', 'image' => 'assets/images/p9.png'],
+    ['slug' => 'accessories', 'name' => 'Accessories', 'desc' => 'Cases, cleaning cloths, lens spray and chains.', 'image' => 'assets/images/p21.png'],
 ];
 
 require __DIR__ . '/includes/header.php';
@@ -32,8 +31,8 @@ require __DIR__ . '/includes/header.php';
 <section class="hero">
   <div class="hero-content">
     <p class="eyebrow">MADIXX</p>
-    <h1>Beauty, Refined.</h1>
-    <p>Discover skincare and cosmetics designed to enhance your natural glow.</p>
+    <h1>See Clearly. Stand Out.</h1>
+    <p>Sunglasses, prescription-ready spectacles and eyewear accessories designed to see and be seen.</p>
     <div class="hero-actions">
       <a href="<?= e(base_url('shop.php')) ?>" class="btn btn-primary">Shop Collection</a>
       <a href="<?= e(base_url('about.php')) ?>" class="btn btn-outline">Discover MADIXX</a>
@@ -45,8 +44,8 @@ require __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="section-heading text-center">
       <p class="eyebrow">Shop By Category</p>
-      <h2>Find Your Glow</h2>
-      <p>Curated edits for every step of your beauty ritual.</p>
+      <h2>Find Your Frame</h2>
+      <p>Curated edits for sun, sight and everything in between.</p>
     </div>
     <div class="category-grid">
       <?php foreach ($categoryTiles as $tile): ?>
@@ -68,7 +67,7 @@ require __DIR__ . '/includes/header.php';
     <div class="section-heading text-center">
       <p class="eyebrow">Customer Favorites</p>
       <h2>The MADIXX Edit</h2>
-      <p>Our most-loved formulas, chosen by you.</p>
+      <p>Our most-loved frames, chosen by you.</p>
     </div>
     <div class="product-grid">
       <?php foreach ($bestsellers as $product): ?>
@@ -83,11 +82,11 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section fade-in">
   <div class="container editorial-split">
-    <img src="<?= e(base_url('assets/images/placeholder-category.jpg')) ?>" alt="The MADIXX ritual" loading="lazy">
+    <img src="<?= e(base_url('assets/images/hero.png')) ?>" alt="The MADIXX studio" loading="lazy">
     <div>
       <p class="eyebrow">Our Philosophy</p>
-      <h2>Skincare As Self-Respect</h2>
-      <p style="color:var(--text-muted);margin-bottom:1.6em;">Every MADIXX formula is built on clinically-proven actives, gentle textures and a quiet kind of luxury. We believe your routine should feel like a ritual, not a chore.</p>
+      <h2>Eyewear As Self-Expression</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.6em;">Every MADIXX frame is built on durable materials, precise fit and a quiet kind of confidence. We believe your glasses should feel like an extension of you, not an afterthought.</p>
       <a href="<?= e(base_url('about.php')) ?>" class="btn btn-primary">Discover Our Story</a>
     </div>
   </div>
